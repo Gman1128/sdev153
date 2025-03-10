@@ -124,8 +124,14 @@ main {
     padding-bottom: 0;
 }
 
+#logo {
+    height:10%;
+    width: 10%;
+    float: left;
+}
+
 #homehero {
-    height: 500x;
+    height: 500px;
     background-image: url(images/home.jpg);
     background-size: 200% 100%;
     background-repeat: no-repeat;
@@ -141,6 +147,13 @@ main {
 #moonhero {
     height: 500px;
     background-image: url(images/moon.jpg);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+}
+
+#sunhero {
+    height: 500px;
+    background-image: url(images/sun.jpg);
     background-size: 200% 100%;
     background-repeat: no-repeat;
 }
@@ -165,9 +178,51 @@ section {
     background-repeat: no-repeat;
 }
 
+#packagehero {
+    height: 500px;
+    background-image: url(images/package.jpg);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+}
+
 video {
     float: right;
     margin: 2em;
+}
+
+table{
+    border: 1px solid blue;
+    border-collapse: collapse;
+    margin: auto;
+    width: 90%;
+}
+
+table td, th {
+    padding: 5px;
+    border: 1px solid blue;
+}
+
+table td {
+    text-align: center;
+}
+
+table tr:nth-of-type(even) {
+    background-color: #DFEDF8;
+}
+
+.text {
+    text-align: left;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    width: 80%;
+}
+
+input, textarea {
+    margin-bottom: .5em;
 }
 
 @media (width >= 600px) {
@@ -178,12 +233,28 @@ video {
         gap: 1em;
     }
 
+    #logo {
+        height:10%;
+        width: 10%;
+        position: absolute;
+    }
+
     input[type=submit] {
         grid-column: 2/3;
         width: 9em;
     }
 
+    #logo {
+        height:10%;
+        width: 10%;
+        float: left;
+    }
+
     #reshero {
+        background-size: 100% 100%;
+    }
+
+    #packagehero {
         background-size: 100% 100%;
     }
     
@@ -228,7 +299,7 @@ video {
         display: inline;
     }
 
-    #homehero, #earthhero, #moonhero{
+    #homehero, #earthhero, #moonhero, #sunhero{
         background-size: 100% 100%;
     }
 }
